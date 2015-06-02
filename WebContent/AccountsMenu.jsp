@@ -2,8 +2,8 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Seller Menu</title>
-<link rel="stylesheet" type = "text/css" href="Sellers.css">
+<title>Account</title>
+<link rel="stylesheet" type = "text/css" href="Accounts.css">
 </head>
 <body>
 <img src="background.jpg" id="background">
@@ -20,9 +20,9 @@
 </div>
 <div class="main">
 <ul>
-	<li><a href="ListItem.jsp">List An Item For Sale</a></li>
-	<li><a href="ItemsOnSale.jsp">View My Items On Sale</a></li>
-	<li><a href="SoldItems.jsp">View My Sold Items</a></li>
+	<li><a href="purchaseHistory.jsp">Purchase History</a></li>
+	<li><a href="bidding.jsp">Items You're Bidding On</a></li>
+	<li><a href="changeDetails.jsp">Change Your Details</a></li>
 </ul>
 </div>
 </body>

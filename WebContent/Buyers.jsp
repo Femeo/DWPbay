@@ -16,7 +16,7 @@
 <div class="menu">
 <a href="Buyers.jsp">Buyer</a>
 <a href="SellerMenu.jsp">Seller</a>
-<a href="#">Account</a>
+<a href="AccountMenu.jsp">Account</a>
 </div>
 <div class="search">
 <form id="search">

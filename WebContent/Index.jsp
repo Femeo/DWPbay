@@ -16,7 +16,7 @@
 <div class="menu">
 <a href="Buyers.jsp">Buyer</a>
 <a href="SellerMenu.jsp">Seller</a>
-<a href="#">Account</a>
+<a href="AccountsMenu.jsp">Account</a>
 </div>
 <h1>Items Ending Soon....</h1>
 <table>
