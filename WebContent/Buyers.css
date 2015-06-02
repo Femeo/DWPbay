@@ -31,6 +31,7 @@ img {
 	float: right;
 	margin-right: 10%;
 	margin-top: 1%;
+	padding-bottom: 4%;
 }
 #logout {
 	float: right;
@@ -74,12 +75,20 @@ img {
 	float: right;
 	right: 0;
 }
-table {
+.items {
 	width: 100%;
 	text-align: center;
+	border-left: 1;
+	border-left-style: solid;
+	border-left-color: GREY;
 }
 td#picture {
 	padding-top: 5%;
+	padding-left: 3%;
+	border-top: 1;
+	border-top-style: solid;
+	border-top-color: GREY;
+
 }
 td#picture img {
 	width: 130px;
@@ -90,6 +99,12 @@ td#name {
 	font-size: 200%;
 	vertical-align: middle;
 	padding-top: 8%;
+	border-right: 1;
+	border-right-style: solid;
+	border-right-color: GREY;
+	border-top: 1;
+	border-top-style: solid;
+	border-top-color: GREY;
 }
 td#price {
 	color: #424242;
@@ -99,6 +114,9 @@ td#price {
 	padding-bottom: 3%;
 	vertical-align: middle;
 	height: 10%;
+	border-right: 1;
+	border-right-style: solid;
+	border-right-color: GREY;
 }
 td#description {
 	font-size: 150%;
@@ -107,10 +125,16 @@ td#description {
 	padding-left: 5%;
 	padding-right: 5%;
 	color: #003366;
+	border-right: 1;
+	border-right-style: solid;
+	border-right-color: GREY;
 	
 }
 td#bid {
 	vertical-align: top;
+	border-right: 1;
+	border-right-style: solid;
+	border-right-color: GREY;
 }
 td#bid button {
 	color: #003366;

@@ -10,12 +10,12 @@
 <div class="header"><img src="logo.png"></div>
 <form action="Index.jsp" method="get">
 Username:<br>
-<input type="text" name="username"><br><br>
+<input type="text" name="user_name"><br><br>
 Password:<br>
 <input type="password" name="password"><br><br>
 <input type="submit" value="Enter" id="submit">
 </form><br><br>
-<a href="#" id="new">Im New</a>
+<a href="NewUser.jsp" id="new">Im New</a>
 <a href="#" id="forgotton">I've Forgotten<br>My Password</a>
 </body>
 </html>

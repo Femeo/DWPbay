@@ -34,7 +34,7 @@ Search:&nbsp
 </ul>
 </nav>
 <nav id="main">
-<table>
+<table class="items">
 <tr>
 	<td rowspan="3" id="picture"><img src="blacksofa.jpg"></td>
 	<td id="name">Black Leather Sofa</td>

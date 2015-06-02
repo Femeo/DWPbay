@@ -3,13 +3,14 @@ body{
 	background-size: 100% auto;
 	background-attachment: fixed;
 	z-index: 1;
+	text-align: center;
 }
 .header {	
 	text-align: center;
 }
 form {
 	text-align: center;
-	color: BLACK;
+	color: #0A0A2A;
 	font-size: x-large;
 	font-weight: bold;
 }
@@ -20,11 +21,14 @@ img {
 	font-size: x-large;
 	color: #003366
 }
+#cancel {
+	font-size: x-large;
+	color: #003366
+}
 #new {
 	text-align: center;
 	font-size: xx-large;
 	color: #003366;
-	margin-left: 30%;
 	text-decoration: none;
 }
 #forgotton {
