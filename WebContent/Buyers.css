@@ -110,8 +110,8 @@ td#price {
 	color: #424242;
 	font-size: 175%;
 	font-weight: bold;
-	padding-top: 1%;
-	padding-bottom: 3%;
+	padding-top: 2%;
+	padding-bottom: 2%;
 	vertical-align: middle;
 	height: 10%;
 	border-right: 1;
@@ -131,7 +131,7 @@ td#description {
 	
 }
 td#bid {
-	vertical-align: top;
+	vertical-align: middle;
 	border-right: 1;
 	border-right-style: solid;
 	border-right-color: GREY;

@@ -36,15 +36,19 @@ Search:&nbsp
 <nav id="main">
 <table class="items">
 <tr>
-	<td rowspan="3" id="picture"><img src="blacksofa.jpg"></td>
+	<td rowspan="4" id="picture"><img src="blacksofa.jpg"></td>
 	<td id="name">Black Leather Sofa</td>
-	<td rowspan="3" id="picture"><img src="iphone.jpg"></td>
+	<td rowspan="4" id="picture"><img src="iphone.jpg"></td>
 	<td id="name">Silver iPhone 5</td>
 	
 </tr>
 <tr>
-	<td id="price">£200</td>
-	<td id="price">£160</td>
+	<td id="price">Current Price: £200</td>
+	<td id="price">Current Price: £160</td>
+</tr>
+<tr>
+	<td id="price">Reserve: £250</td>
+	<td id="price">Reserve: £150</td>
 </tr>
 <tr>
 	<td id="bid"><button onClick="location.href='#'">Place Bid</button></td>
@@ -56,16 +60,19 @@ Search:&nbsp
 </tr>
 
 <tr>
-	<td rowspan="3" id="picture"><img src="sandals.jpg"></td>
+	<td rowspan="4" id="picture"><img src="sandals.jpg"></td>
 	<td id="name">Ugg Size 4 Gladiator Sandals</td>
-	<td rowspan="3" id="picture"><img src="skaterdress.jpg"></td>
+	<td rowspan="4" id="picture"><img src="skaterdress.jpg"></td>
 	<td id="name">Miss Selfridge Size 10 Black Skater Dress</td>
 	
 </tr>
 <tr>
-	<td id="price">£15</td>
-	<td id="price">£12</td>
+	<td id="price">Current Price: £15</td>
+	<td id="price">Current Price: £12</td>
 </tr>
+<tr>
+	<td id="price">Reserve: £40</td>
+	<td id="price">Reserve: £15</td>
 <tr>
 	<td id="bid"><button onClick="location.href='#'">Place Bid</button></td>
 	<td id="bid"><button onClick="location.href='#'">Place Bid</button></td>

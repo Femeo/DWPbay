@@ -21,7 +21,7 @@
 <div class="main">
 <ul>
 	<li><a href="ListItem.jsp">List An Item For Sale</a></li>
-	<li><a href="#">View My Items On Sale</a></li>
+	<li><a href="ItemsOnSale.jsp">View My Items On Sale</a></li>
 	<li><a href="#">View My Sold Items</a></li>
 </ul>
 </div>
