@@ -17,7 +17,7 @@ Password:<br>
 <input type="submit" value="Enter" id="submit">
 </form><br><br>
 <a href="NewUser.jsp" id="new">Im New</a>
-<a href="#" id="forgotton">I've Forgotten<br>My Password</a>
+<a href="ForgottenPassword.html" id="forgotton">I've Forgotten<br>My Password</a>
 </div>
 </body>
 </html>
