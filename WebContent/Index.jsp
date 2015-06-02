@@ -8,9 +8,13 @@
 <body>
 <img src="background.jpg" id="background">
 <button onClick="location.href='LogIn.jsp'" id="logout">Log Out</button>
-<div class="header"><img src="logo.png"></div>
+<div class="header">
+<a href="Index.jsp">
+<img src="logo.png">
+</a>
+</div>
 <div class="menu">
-<a href="#">Buyer</a>
+<a href="Buyers.jsp">Buyer</a>
 <a href="#">Seller</a>
 <a href="#">Account</a>
 </div>
@@ -34,7 +38,7 @@
 </tr>
 <tr>
 <td id="name">Ugg Size 4 Gladiator Sandals</td>
-<td id="name">Miss Selfridge Size 10 White Skater Dress</td>
+<td id="name">Miss Selfridge Size 10 Black Skater Dress</td>
 </tr>
 <tr>
 <td id="price">£15</td>

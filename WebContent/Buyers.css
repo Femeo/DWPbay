@@ -1,0 +1,119 @@
+body{
+	background-color: #D8D8D*;
+	background-size: 100% auto;
+	background-attachment: fixed;
+	z-index: 1;
+}
+.header {	
+	text-align: center;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+img {
+	width: 30%;
+}
+.menu {
+	width: 100%;
+	height: 10%;
+	background-color: #003366;
+	text-align: center;
+}
+.menu a {
+	color: WHITE;
+	font-size: 400%;
+	margin: 5%;
+}
+.search {
+	font-size: 200%;
+	color: #003366;
+}
+.search form {
+	float: right;
+	margin-right: 10%;
+	margin-top: 1%;
+}
+#logout {
+	float: right;
+	padding: 1%;
+	z-index: 2;
+	margin-right: 5%;
+	color: #003366;
+	font-size: medium;
+}
+#background{
+	opacity: 0.5;
+	width: 100%;
+    height: 100%;
+    overflow: visible;
+    position: fixed;
+    z-index:-1;
+}
+#categories {
+	width: 20%;
+	height: 100%;
+	float: left;
+	margin-top: 2.5%;
+}
+#categories ul li {
+	margin-top: 20%;
+	list-style-type: none;
+}
+#categories ul li a {
+	color: #003366;
+	font-size: 200%;
+	text-decoration: none;
+}
+#categories ul li a:hover {
+	color: GREY;
+	text-decoration: underline;
+}
+
+#main {
+	width: 80%;
+	height: auto;
+	float: right;
+	right: 0;
+}
+table {
+	width: 100%;
+	text-align: center;
+}
+td#picture {
+	padding-top: 5%;
+}
+td#picture img {
+	width: 130px;
+	hight: 150px;
+}
+td#name {
+	color: #003366;
+	font-size: 200%;
+	vertical-align: middle;
+	padding-top: 8%;
+}
+td#price {
+	color: #424242;
+	font-size: 175%;
+	font-weight: bold;
+	padding-top: 1%;
+	padding-bottom: 3%;
+	vertical-align: middle;
+	height: 10%;
+}
+td#description {
+	font-size: 150%;
+	padding-top: 2%;
+	padding-bottom: 10%;
+	padding-left: 5%;
+	padding-right: 5%;
+	color: #003366;
+	
+}
+td#bid {
+	vertical-align: top;
+}
+td#bid button {
+	color: #003366;
+	text-decoration: none;
+	font-size: 200%;
+}
