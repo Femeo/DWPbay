@@ -1,0 +1,66 @@
+body{
+	background-color: #D8D8D*;
+	background-size: 100% auto;
+	background-attachment: fixed;
+	z-index: 1;
+}
+.header {	
+	text-align: center;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+img {
+	width: 30%;
+}
+.menu {
+	width: 100%;
+	height: 10%;
+	background-color: #003366;
+	text-align: center;
+}
+.menu a {
+	color: WHITE;
+	font-size: 400%;
+	margin: 5%;
+}
+h1 {
+	font-size: 300%;
+	color: #003366;
+}
+#logout {
+	float: right;
+	padding: 1%;
+	z-index: 2;
+	margin-right: 5%;
+	color: #003366;
+	font-size: medium;
+}
+#background{
+	opacity: 0.5;
+	width: 100%;
+    height: 100%;
+    overflow: visible;
+    position: fixed;
+    z-index:-1;
+}
+table {
+	width: 100%;
+	text-align: center;
+}
+td#picture {
+	padding-top: 5%;
+}
+td#picture img {
+	width: 130px;
+	hight: 150px;
+}
+td#name {
+	color: #003366;
+	font-size: 200%;
+}
+td#price {
+	color: #424242;
+	font-size: 175%;
+	font-weight: bold;
+	padding-bottom: 5%;
+}
