@@ -105,3 +105,11 @@ td#description {
 	padding-right: 5%;
 	color: #003366;	
 }
+td#bid {
+	vertical-align: middle;
+}
+td#bid button {
+	color: #003366;
+	text-decoration: none;
+	font-size: 150%;
+}
