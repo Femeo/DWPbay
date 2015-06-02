@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>My Items</title>
+<title>My Sold Items</title>
 <link rel="stylesheet" type = "text/css" href="Sellers.css">
 </head>
 <body>
