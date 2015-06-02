@@ -3,9 +3,11 @@ body{
 	background-size: 100% auto;
 	background-attachment: fixed;
 	z-index: 1;
-	text-align: center;
 }
 .header {	
+	text-align: center;
+}
+.main {
 	text-align: center;
 }
 form {

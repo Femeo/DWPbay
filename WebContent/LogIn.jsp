@@ -8,6 +8,7 @@
 <body>
 <img src="background.jpg" id="background">
 <div class="header"><img src="logo.png"></div>
+<div class="main">
 <form action="Index.jsp" method="get">
 Username:<br>
 <input type="text" name="user_name"><br><br>
@@ -17,5 +18,6 @@ Password:<br>
 </form><br><br>
 <a href="NewUser.jsp" id="new">Im New</a>
 <a href="#" id="forgotton">I've Forgotten<br>My Password</a>
+</div>
 </body>
 </html>

@@ -9,6 +9,9 @@ body{
 	margin-left: 10%;
 	margin-right: 10%;
 }
+.main {
+	text-align: center;
+}
 img {
 	width: 30%;
 }
@@ -38,6 +41,7 @@ img {
     overflow: visible;
     position: fixed;
     z-index:-1;
+    text-align: ce
 }
 
 ul li {
@@ -53,4 +57,14 @@ ul li a {
 ul li a:hover {
 	color: GREY;
 	text-decoration: underline;
+}
+form {
+	text-align: center;
+	color: #0A0A2A;
+	font-size: x-large;
+	font-weight: bold;
+}
+#back {
+	font-size: x-large;
+	color: #003366
 }
