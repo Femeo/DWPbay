@@ -22,7 +22,7 @@
 <ul>
 	<li><a href="purchaseHistory.jsp">Purchase History</a></li>
 	<li><a href="bidding.jsp">Items You're Bidding On</a></li>
-	<li><a href="changeDetails.jsp">Change Your Details</a></li>
+	<li><a href="ChangeDetails.jsp">Change Your Details</a></li>
 </ul>
 </div>
 </body>
