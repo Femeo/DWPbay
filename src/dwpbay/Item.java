@@ -10,11 +10,11 @@ public class Item {
 	private String description ;
 	private String picture ;
 	private Double price ;
-	private int onSale ;
+	private boolean onSale ;
 	private Double reservePrice ;
 	private LocalDateTime startDateTime ;
 	
-	public Item(int itemID, String title, String category, String description, String picture, Double price, int onSale, Double reservePrice, LocalDateTime startDateTime) {
+	public Item(int itemID, String title, String category, String description, String picture, Double price, boolean onSale, Double reservePrice, LocalDateTime startDateTime) {
 		this.itemID = itemID ;
 		this.title = title ;
 		this.category = category ;

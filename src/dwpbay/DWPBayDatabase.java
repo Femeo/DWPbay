@@ -25,7 +25,7 @@ public class DWPBayDatabase {
 			catch (ClassNotFoundException e ) {
 				System.out.println("Class not Found");
 			}
-			connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/rms",userName,password);
+			connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/dwpbay",userName,password);
 			System.out.println("Connecting to database...");
 			System.out.println(" ");
 			statement = connection.createStatement();
@@ -93,7 +93,16 @@ public class DWPBayDatabase {
 		return null ;
 	}
 	
-	
+	static ResultSet allbids() {
+		try {
+			ResultSet rs = statement.executeQuery("SELECT * from homepage");
+			return rs ;
+		}
+		catch (SQLException e) {
+			System.out.println("SQL Exception " + e);
+		}
+		return null ;
+	}
 	
 	
 	

@@ -9,7 +9,7 @@
 <img src="background.jpg" id="background">
 <div class="header"><img src="logo.png"></div>
 <div class="main">
-<form action="Index.jsp" method="get">
+<form action="login" method="post">
 Username:<br>
 <input type="text" name="user_name"><br><br>
 Password:<br>

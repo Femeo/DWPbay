@@ -1,3 +1,6 @@
+<%@page import="dwpbay.Item"%>
+<%@page import="dwpbay.ItemsBean"%>
+<%@page import="java.util.List"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,38 +23,27 @@
 </div>
 <h1>Items Ending Soon....</h1>
 <table>
-<tr>
-	<td id="picture"><img src="blacksofa.jpg"></td>
-	<td id="picture"><img src="iphone.jpg"></td>
-</tr>
-<tr>
-	<td id="name">Black Leather Sofa</td>
-	<td id="name">Used iPhone 5 Silver</td>
-</tr>
-<tr>
-	<td id="price">£200</td>
-	<td id="price">£160</td>
-</tr>
-<tr>
-	<td><button id="bid" onClick="location.href='#'">View Item</button></td>
-	<td><button id="bid" onClick="location.href='#'">View Item</button></td>
-</tr>
-<tr>
-	<td id="picture"><img src="sandals.jpg"></td>
-	<td id="picture"><img src="skaterdress.jpg"></td>
-</tr>
-<tr>
-	<td id="name">Ugg Size 4 Gladiator Sandals</td>
-	<td id="name">Miss Selfridge Size 10 Black Skater Dress</td>
-</tr>
-<tr>
-	<td id="price">£15</td>
-	<td id="price">£12</td>
-</tr>
-<tr>
-	<td><button id="bid" onClick="location.href='#'">View Item</button></td>
-	<td><button id="bid" onClick="location.href='#'">View Item</button></td>
-</tr>
+
+<%
+
+List<ItemsBean> allItems = (List<ItemsBean>)request.getAttribute("Results");
+for (ItemsBean i : allItems) {
+	out.println("<tr>"
+	+ "<td id='picture'><img src='" + i.getPicture() + "'></td>"
+	+ "</tr>"
+	+ "<tr>"
+	+ "<td id='name'>"  + i.getTitle() + "</td>"
+	+ "</tr>"
+	+ "<tr>"
+	+ "<td id='price'>"  + i.getPrice() + "</td>"
+	+ "</tr>"
+	+ "<tr>"
+	+ "<td><button id='bid' onClick='location.href='#''>View Item</button></td>"
+	+ "</tr>");
+	
+}
+	
+%>
 </table>
 <br><br>
 </body>

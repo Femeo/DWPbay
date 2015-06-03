@@ -10,9 +10,21 @@ public class ItemsBean {
 	private String description = null ;
 	private String picture = null ;
 	private Double price = 0.0 ;
-	private int onSale = 0 ;
+	private Boolean onSale = false ;
 	private Double reservePrice = 0.0 ;
 	private LocalDateTime startDateTime = null ;
+	
+	public ItemsBean(int itemID, String title, String category, String description, String picture, Double price, boolean onSale, Double reservePrice, LocalDateTime startDateTime) {
+		this.itemID = itemID ;
+		this.title = title ;
+		this.category = category ;
+		this.description = description ;
+		this.picture = picture ;
+		this.price = price ;
+		this.onSale = onSale ;
+		this.reservePrice = reservePrice ;
+		this.startDateTime = startDateTime ;
+	}
 
 
 	public int getItemID() {
@@ -51,10 +63,10 @@ public class ItemsBean {
 	public void setPrice(Double price) {
 		this.price = price;
 	}
-	public int getOnSale() {
+	public boolean getOnSale() {
 		return onSale;
 	}
-	public void setOnSale(int onSale) {
+	public void setOnSale(boolean onSale) {
 		this.onSale = onSale;
 	}
 	public Double getReservePrice() {
