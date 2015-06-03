@@ -62,5 +62,14 @@ td#price {
 	color: #424242;
 	font-size: 175%;
 	font-weight: bold;
-	padding-bottom: 5%;
 }
+
+td button {
+	vertical-align: top;
+}
+td button {
+	color: #003366;
+	text-decoration: none;
+	font-size: 200%;
+}
+
