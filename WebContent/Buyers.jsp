@@ -51,7 +51,7 @@ Search:&nbsp
 	<td id="price">Reserve: £150</td>
 </tr>
 <tr>
-	<td id="bid"><button onClick="location.href='#'">Place Bid</button></td>
+	<td id="bid"><button onClick="location.href='ItemView.jsp'">Place Bid</button></td>
 	<td id="bid"><button onClick="location.href='#'">Place Bid</button></td>
 </tr>
 <tr>

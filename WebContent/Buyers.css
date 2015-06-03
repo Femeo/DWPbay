@@ -94,6 +94,10 @@ td#picture img {
 	width: 130px;
 	hight: 150px;
 }
+td#IndividualPicture img {
+	width: 500px;
+	hight: 1000px;
+}
 td#name {
 	color: #003366;
 	font-size: 200%;
@@ -121,14 +125,13 @@ td#price {
 td#description {
 	font-size: 150%;
 	padding-top: 2%;
-	padding-bottom: 10%;
+	padding-bottom: 5%;
 	padding-left: 5%;
 	padding-right: 5%;
 	color: #003366;
 	border-right: 1;
 	border-right-style: solid;
 	border-right-color: GREY;
-	
 }
 td#bid {
 	vertical-align: middle;
@@ -140,4 +143,16 @@ td#bid button {
 	color: #003366;
 	text-decoration: none;
 	font-size: 200%;
+}
+td#buying {
+	font-size: 170%;
+	color: #003366;
+	border-right: 1;
+	border-right-style: solid;
+	border-right-color: GREY;
+}
+#submit{
+	color: #003366;
+	text-decoration: none;
+	font-size: 100%;
 }
