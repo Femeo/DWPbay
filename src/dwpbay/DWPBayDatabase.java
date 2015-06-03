@@ -17,27 +17,6 @@ public class DWPBayDatabase {
 	private static String password = "";
 
 	
-	static Connection openDataBase() {
-		try { 
-			try{ 
-				Class.forName("com.mysql.jdbc.Driver");
-			}
-			catch (ClassNotFoundException e ) {
-				System.out.println("Class not Found");
-			}
-			connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/dwpbay",userName,password);
-			System.out.println("Connecting to database...");
-			System.out.println(" ");
-			statement = connection.createStatement();
-		}
-		catch (SQLException e){
-			System.out.println("SQL Exception");
-		}
-		
-		return connection;
-	}
-
-	
 	static ResultSet allclothes() {
 		try { 
 			ResultSet rs = statement.executeQuery("SELECT * from allclothes");

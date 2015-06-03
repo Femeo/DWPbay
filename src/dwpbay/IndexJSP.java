@@ -6,7 +6,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import java.sql.*;
-import java.time.LocalDateTime;
+import java.time.*;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
@@ -42,23 +42,19 @@ public class IndexJSP extends HttpServlet {
 		
 	}
 	
-	public void destroy() {
-		if(connection != null){
-			try {
-				connection.close() ;
-			}
-			catch(SQLException e) {} 
-		}
-	}
-
 	public void doGet (HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
 		try {
-			ResultSet rs = DWPBayDatabase.allbids() ;
+			Statement statement = connection.createStatement();
+			
+			ResultSet rs = statement.executeQuery("SELECT * from homepage") ;
 			List<ItemsBean> allItems = new ArrayList<ItemsBean>() ;
-			DateTimeFormatter dt = DateTimeFormatter.ofPattern("yyyy.MM.dd ',' HH:mm:ss");
+			System.out.println("1");
+			DateTimeFormatter dt = DateTimeFormatter.ofPattern("yyyy-MM-dd hh:mm:ss");
 			int i = 0 ;
 			while (rs.next() && i <= 4){
-				LocalDateTime startDate = LocalDateTime.parse(rs.getString(8), dt);
+				System.out.println("2");
+				System.out.println(rs.getString(9)); 
+				LocalDateTime startDate = LocalDateTime.parse(rs.getString(9), dt);
 				int itemID = Integer.parseInt(rs.getString(1));
 				double MaxPrice = Double.parseDouble(rs.getString(6));
 				double reservePrice = Double.parseDouble(rs.getString(8));
@@ -75,8 +71,16 @@ public class IndexJSP extends HttpServlet {
 			request.getRequestDispatcher("Index.jsp").forward(request, response);
 		}
 		catch(Exception e){
-			System.out.println("Exception" + e);
+			System.out.println("Exception" + e );
 		}
 	}
 
+	public void destroy() {
+		if(connection != null){
+			try {
+				connection.close() ;
+			}
+			catch(SQLException e) {} 
+		}
+	}
 }

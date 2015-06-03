@@ -62,7 +62,7 @@ public class LoginJSP extends HttpServlet {
 					request.setAttribute("authenticated",false);
 				}
 			}
-			request.getRequestDispatcher("logIn.jsp").forward(request, response);
+			request.getRequestDispatcher("LogIn.jsp").forward(request, response);
 			
 		}
 		catch (SQLException e ) {

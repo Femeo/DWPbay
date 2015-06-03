@@ -11,7 +11,7 @@ public class ItemsBean {
 	private String picture = null ;
 	private Double price = 0.0 ;
 	private Boolean onSale = false ;
-	private Double reservePrice = 0.0 ;
+	private Double reservePrice = null ;
 	private LocalDateTime startDateTime = null ;
 	
 	public ItemsBean(int itemID, String title, String category, String description, String picture, Double price, boolean onSale, Double reservePrice, LocalDateTime startDateTime) {
