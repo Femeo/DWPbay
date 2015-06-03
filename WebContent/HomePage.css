@@ -72,4 +72,7 @@ td button {
 	text-decoration: none;
 	font-size: 200%;
 }
-
+p {
+	text-align: center; 
+	font-size: 200% ;
+}
