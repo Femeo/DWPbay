@@ -3,7 +3,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Account</title>
-<link rel="stylesheet" type = "text/css" href="Sellers.css">
+<link rel="stylesheet" type = "text/css" href="Accounts.css">
 </head>
 <body>
 <img src="background.jpg" id="background">
