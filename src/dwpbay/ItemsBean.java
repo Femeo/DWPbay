@@ -28,6 +28,8 @@ public class ItemsBean {
 		this.setStartDate(startDate) ;
 		this.setStartTime(startTime) ;
 	}
+	
+	public ItemsBean(int itemID) {}
 
 
 	public int getItemID() {

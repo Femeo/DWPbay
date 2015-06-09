@@ -1,4 +1,3 @@
-<%@page import="dwpbay.Item"%>
 <%@page import="dwpbay.ItemsBean"%>
 <%@page import="java.util.List"%>
 <!DOCTYPE html>
@@ -17,9 +16,9 @@
 </a>
 </div>
 <div class="menu">
-<a href="Buyers.jsp">Buyer</a>
+<form action="Buyers" method="post"><input type="submit" name="go" value="Buyer" id="buyers">
 <a href="SellerMenu.jsp">Seller</a>
-<a href="AccountsMenu.jsp">Account</a>
+<a href="AccountsMenu.jsp">Account</a></form>
 </div>
 <table class="items">
 
@@ -41,8 +40,9 @@ for (ItemsBean i : Item) {
 	+ "<td colspan='2' id='description'>" + i.getDescription() + "</td>"
 	+ "</tr>"
 	+ "<tr>"
-	+ "<td id='buying'><form>Enter Bid:<br><br>£<input id='submit' type='text' name='bid'><br><br>"
-	+ "<input id='submit' type='submit' value='Place Bid'></form>"
+	+ "<td id='buying'><form action='bidding' method='post'>Enter Bid:<br><br>£<input id='submit' type='text' name='bid'><br><br>"
+	+ "<input type='hidden' name='ItemID' value='" + i.getItemID() + "'>"
+	+ "<input id='submit' type='submit' value='PlaceBid' name='go'></form>"
 	+ "</td>"
 	
 	);

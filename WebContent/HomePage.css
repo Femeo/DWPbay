@@ -18,6 +18,15 @@ img {
 	background-color: #003366;
 	text-align: center;
 }
+#buyers {
+	color: WHITE;
+	font-size: 400%;
+	margin: 5%;
+	background-color: transparent;
+	border: none;
+	text-decoration: underline;
+	display: inline;	
+}
 .menu a {
 	color: WHITE;
 	font-size: 400%;

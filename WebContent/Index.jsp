@@ -1,4 +1,3 @@
-<%@page import="dwpbay.Item"%>
 <%@page import="dwpbay.ItemsBean"%>
 <%@page import="java.util.List"%>
 <!DOCTYPE html>
@@ -17,9 +16,9 @@
 </a>
 </div>
 <div class="menu">
-<a href="Buyers">Buyer</a>
+<form action="Buyers" method="post"><input type="submit" name="go" value="Buyer" id="buyers">
 <a href="SellerMenu.jsp">Seller</a>
-<a href="AccountsMenu.jsp">Account</a>
+<a href="AccountsMenu.jsp">Account</a></form>
 </div>
 <h1>Items Ending Soon....</h1>
 <table>

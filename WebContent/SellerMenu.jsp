@@ -14,16 +14,17 @@
 </a>
 </div>
 <div class="menu">
-<a href="Buyers.jsp">Buyer</a>
+<form action="Buyers" method="post"><input type="submit" name="go" value="Buyer" id="buyers">
 <a href="SellerMenu.jsp">Seller</a>
-<a href="AccountsMenu.jsp">Account</a>
+<a href="AccountsMenu.jsp">Account</a></form>
 </div>
 <div class="main">
 <ul>
 	<li><a href="ListItem.jsp">List An Item For Sale</a></li>
-	<li><a href="ItemsOnSale.jsp">View My Items On Sale</a></li>
+	<li><form action="myItemsOnSale" method="post"><input type="submit" name="go" value="Items On Sale" id="viewItems"></form></li>
 	<li><a href="SoldItems.jsp">View My Sold Items</a></li>
 </ul>
 </div>
+<br><br><br>
 </body>
 </html>

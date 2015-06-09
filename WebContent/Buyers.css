@@ -23,6 +23,15 @@ img {
 	font-size: 400%;
 	margin: 5%;
 }
+#buyers {
+	color: WHITE;
+	font-size: 400%;
+	margin: 5%;
+	background-color: transparent;
+	border: none;
+	text-decoration: underline;
+	display: inline;	
+}
 .search {
 	font-size: 200%;
 	color: #003366;

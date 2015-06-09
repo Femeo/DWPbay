@@ -1,4 +1,3 @@
-<%@page import="dwpbay.Item"%>
 <%@page import="dwpbay.ItemsBean"%>
 <%@page import="java.util.List"%>
 <!DOCTYPE html>
@@ -17,9 +16,9 @@
 </a>
 </div>
 <div class="menu">
-<a href="Buyers.jsp">Buyer</a>
+<form action="Buyers" method="post"><input type="submit" name="go" value="Buyer" id="buyers">
 <a href="SellerMenu.jsp">Seller</a>
-<a href="AccountsMenu.jsp">Account</a>
+<a href="AccountsMenu.jsp">Account</a></form>
 </div>
 <div class="search">
 <form id="search">
@@ -30,10 +29,11 @@ Search:&nbsp
 </div>
 <nav id="categories">
 <ul>
-	<li><a href="#">Clothes</a></li>
-	<li><a href="#">Shoes</a></li>
-	<li><a href="#">Furniture</a></li>
-	<li><a href="#">Electronics</a></li>
+	<li><form action="Buyers" method="post"><input type="submit" name="go" value="Clothes"></form></li>
+	<li><form action="Buyers" method="post"><input type="submit" name="go" value="Shoes"></form></li>
+	<li><form action="Buyers" method="post"><input type="submit" name="go" value="Furniture"></form></li>
+	<li><form action="Buyers" method="post"><input type="submit" name="go" value="Electronics"></form></li>
+	<li><form action="Buyers" method="post"><input type="submit" name="go" value="All"></form></li>
 </ul>
 </nav>
 <nav id="main">

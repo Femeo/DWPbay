@@ -14,7 +14,7 @@ Username:<br>
 <input type="text" name="user_name"><br><br>
 Password:<br>
 <input type="password" name="password"><br><br>
-<input type="submit" value="Enter" id="submit">
+<input type="submit" value="LogIn" name="go" id="submit">
 </form><br><br>
 <a href="NewUser.jsp" id="new">Im New</a>
 <a href="ForgottenPassword.html" id="forgotton">I've Forgotten<br>My Password</a>

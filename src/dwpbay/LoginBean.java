@@ -12,6 +12,8 @@ public class LoginBean {
 		this.password = password ;
 	}
 	
+	public LoginBean() {}
+	
 	public int getUserID() {
 		return userID;
 	}
