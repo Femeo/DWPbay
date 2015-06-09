@@ -16,7 +16,7 @@ import javax.servlet.*;
 
 import sun.reflect.ReflectionFactory.GetReflectionFactoryAction;
 
-public class IndexJSP extends HttpServlet {
+public class BuyersJSP extends HttpServlet {
 	
 	Statement statement = null ;
 	Connection connection = null ;
@@ -79,7 +79,7 @@ public class IndexJSP extends HttpServlet {
 				i++ ;
 			}
 			request.setAttribute("Results", allItems);
-			request.getRequestDispatcher("Index.jsp").forward(request, response);
+			request.getRequestDispatcher("Buyers.jsp").forward(request, response);
 		}
 		catch(Exception e){
 			System.out.println("Exception" + e );

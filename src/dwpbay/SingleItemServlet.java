@@ -1,25 +1,30 @@
 package dwpbay;
 
-import javax.servlet.http.HttpServlet ;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-
-import java.sql.*;
-import java.time.*;
+import java.io.IOException;
+import java.sql.CallableStatement;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.time.LocalDate;
+import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
-import java.io.*;
 
-import javax.servlet.*;
+import javax.servlet.ServletConfig;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
-import sun.reflect.ReflectionFactory.GetReflectionFactoryAction;
-
-public class IndexJSP extends HttpServlet {
+public class SingleItemServlet extends HttpServlet {
 	
 	Statement statement = null ;
 	Connection connection = null ;
+	CallableStatement callstat = null ;
 	
 	public void init(ServletConfig config) throws ServletException{
 		
@@ -44,19 +49,17 @@ public class IndexJSP extends HttpServlet {
 		
 	}
 	
+	
 	public void doGet (HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-		
-		//String method = request.getParameter("submit");
-		
-		//switch (method) {
-		
-		//case "Index" : 
-		
 		try {
-			Statement statement = connection.createStatement();
 			
-			ResultSet rs = statement.executeQuery("SELECT * from homepage") ;
-			List<ItemsBean> allItems = new ArrayList<ItemsBean>() ;
+			String SentItemID = request.getParameter("ItemID") ;			
+			int ItemID = Integer.parseInt(SentItemID);			
+			callstat = connection.prepareCall("select * from homepage where item_id = ?") ;			
+			callstat.setInt(1, ItemID);			
+			ResultSet rs = callstat.executeQuery();
+			
+			List<ItemsBean> Item = new ArrayList<ItemsBean>() ;
 			System.out.println("1");
 			DateTimeFormatter dt = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 			DateTimeFormatter tt = DateTimeFormatter.ofPattern("HH:mm:ss");
@@ -75,31 +78,18 @@ public class IndexJSP extends HttpServlet {
 												rs.getString(4),
 												rs.getString(5),
 												MaxPrice, on_sale, reservePrice, startDate, startTime);
-				allItems.add(newItem);
+				Item.add(newItem);
 				i++ ;
 			}
-			request.setAttribute("Results", allItems);
-			request.getRequestDispatcher("Index.jsp").forward(request, response);
-		}
-		catch(Exception e){
-			System.out.println("Exception" + e );
-		}
-	//	break;
-		}
-//	}
-	
-	public void doPost(HttpServletRequest req, HttpServletResponse resp)
-			throws ServletException, IOException {
-			doGet(req, resp);
-		}
-	
+			request.setAttribute("Results", Item);
+			request.getRequestDispatcher("ItemView.jsp").forward(request, response);
+			
 
-	public void destroy() {
-		if(connection != null){
-			try {
-				connection.close() ;
-			}
-			catch(SQLException e) {} 
+		}
+		catch(SQLException e) {
+			System.out.println("Exeception " + e);
 		}
 	}
-}
+		}
+
+

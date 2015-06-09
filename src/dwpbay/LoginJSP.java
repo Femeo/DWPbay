@@ -51,9 +51,9 @@ public class LoginJSP extends HttpServlet {
 				request.setAttribute("authenticated", false);
 			}else{
 				rs.next();
-				Login currentUserObj = null;
+				LoginBean currentUserObj = null;
 				if(rs.getString(3).equals(request.getParameter("password"))){
-					currentUserObj = new Login(rs.getInt(1),rs.getString(2),rs.getString(3));
+					currentUserObj = new LoginBean(rs.getInt(1),rs.getString(2),rs.getString(3));
 					HttpSession session = request.getSession(true);
 					session.setAttribute("currentUser",currentUserObj);
 					response.sendRedirect("Index");

@@ -1,6 +1,8 @@
 package dwpbay;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.LocalTime;
 
 public class Item {
 	
@@ -9,12 +11,13 @@ public class Item {
 	private String category ;
 	private String description ;
 	private String picture ;
-	private Double price ;
+	private double price ;
 	private boolean onSale ;
-	private Float reservePrice ;
-	private LocalDateTime startDateTime ;
+	private double reservePrice ;
+	private LocalDate startDate ;
+	private LocalTime startTime ;
 	
-	public Item(int itemID, String title, String category, String description, String picture, Double price, boolean onSale, Float reservePrice, LocalDateTime startDateTime) {
+	public Item(int itemID, String title, String category, String description, String picture, double price, boolean onSale, double reservePrice, LocalDate startDate, LocalTime startTime) {
 		this.itemID = itemID ;
 		this.title = title ;
 		this.category = category ;
@@ -23,7 +26,8 @@ public class Item {
 		this.price = price ;
 		this.onSale = onSale ;
 		this.reservePrice = reservePrice ;
-		this.startDateTime = startDateTime ;
+		this.startDate = startDate ;
+		this.startTime = startTime ;
 	}
 
 }

@@ -8,7 +8,7 @@
 <body>
 <img src="background.jpg" id="background">
 <div class="header"><img src="logo.png"></div>
-<form action="Index.jsp" method="post">
+<form action="NewUser" method="get">
 First Name:<br>
 <input type="text" name="first_name"><br><br>
 Last Name:<br>

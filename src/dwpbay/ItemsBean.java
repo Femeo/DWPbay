@@ -1,5 +1,6 @@
 package dwpbay;
 
+import java.time.*;
 import java.time.LocalDateTime;
 
 public class ItemsBean {
@@ -12,9 +13,10 @@ public class ItemsBean {
 	private Double price = 0.0 ;
 	private Boolean onSale = false ;
 	private Double reservePrice = null ;
-	private LocalDateTime startDateTime = null ;
+	private LocalDate startDate = null ;
+	private LocalTime startTime = null;
 	
-	public ItemsBean(int itemID, String title, String category, String description, String picture, Double price, boolean onSale, Double reservePrice, LocalDateTime startDateTime) {
+	public ItemsBean(int itemID, String title, String category, String description, String picture, Double price, boolean onSale, Double reservePrice, LocalDate startDate, LocalTime startTime) {
 		this.itemID = itemID ;
 		this.title = title ;
 		this.category = category ;
@@ -23,7 +25,8 @@ public class ItemsBean {
 		this.price = price ;
 		this.onSale = onSale ;
 		this.reservePrice = reservePrice ;
-		this.startDateTime = startDateTime ;
+		this.setStartDate(startDate) ;
+		this.setStartTime(startTime) ;
 	}
 
 
@@ -75,10 +78,16 @@ public class ItemsBean {
 	public void setReservePrice(Double reservePrice) {
 		this.reservePrice = reservePrice;
 	}
-	public LocalDateTime getStartDateTime() {
-		return startDateTime;
+	public LocalDate getStartDate() {
+		return startDate;
 	}
-	public void setStartDateTime(LocalDateTime startDateTime) {
-		this.startDateTime = startDateTime;
+	public void setStartDate(LocalDate startDate) {
+		this.startDate = startDate;
+	}
+	public LocalTime getStartTime() {
+		return startTime;
+	}
+	public void setStartTime(LocalTime startTime) {
+		this.startTime = startTime;
 	}
 }

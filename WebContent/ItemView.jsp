@@ -1,3 +1,6 @@
+<%@page import="dwpbay.Item"%>
+<%@page import="dwpbay.ItemsBean"%>
+<%@page import="java.util.List"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,23 +22,33 @@
 <a href="AccountsMenu.jsp">Account</a>
 </div>
 <table class="items">
-<tr>
-	<td rowspan="5" id="IndividualPicture"><img src="blacksofa.jpg"></td>
-	<td id="name">Black Leather Sofa</td>	
-</tr>
-<tr>
-	<td id="price">Current Price: £200</td>
-</tr>
-<tr>
-	<td id="price">Reserve: £250</td>
-</tr>
-<tr>
-	<td colspan="2" id="description">Black Genuine Leather Sofa. 3 years old and in very good condition</td>
-</tr>
-<tr>
-	<td id="buying"><form>Enter Bid:<br><br>£<input id="submit" type="text" name="bid"><br><br>
-			  <input id="submit" type="submit" value="Place Bid"></form>
-</td>
+
+<%
+
+List<ItemsBean> Item = (List<ItemsBean>)request.getAttribute("Results");
+for (ItemsBean i : Item) {
+	out.println("<tr>"
+	+ "<td rowspan='5' id='IndividualPicture'><img src='" + i.getPicture() + "'></td>"
+	+ "<td id='name'>" + i.getTitle() + "</td>"	
+	+ "</tr>"
+	+ "<tr>"
+	+ "<td id='price'>Current Price: £" + i.getPrice() + "</td>"
+	+ "</tr>"
+	+ "<tr>"
+	+ "<td id='price'>Reserve: £" + i.getReservePrice() + "</td>"
+	+ "</tr>"
+	+ "<tr>"
+	+ "<td colspan='2' id='description'>" + i.getDescription() + "</td>"
+	+ "</tr>"
+	+ "<tr>"
+	+ "<td id='buying'><form>Enter Bid:<br><br>£<input id='submit' type='text' name='bid'><br><br>"
+	+ "<input id='submit' type='submit' value='Place Bid'></form>"
+	+ "</td>"
+	
+	);
+}
+
+%>
 </table>
 <br><br>
 </div>

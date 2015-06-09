@@ -1,3 +1,6 @@
+<%@page import="dwpbay.Item"%>
+<%@page import="dwpbay.ItemsBean"%>
+<%@page import="java.util.List"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,7 +19,7 @@
 <div class="menu">
 <a href="Buyers.jsp">Buyer</a>
 <a href="SellerMenu.jsp">Seller</a>
-<a href="AccountMenu.jsp">Account</a>
+<a href="AccountsMenu.jsp">Account</a>
 </div>
 <div class="search">
 <form id="search">
@@ -35,52 +38,26 @@ Search:&nbsp
 </nav>
 <nav id="main">
 <table class="items">
-<tr>
-	<td rowspan="4" id="picture"><img src="blacksofa.jpg"></td>
-	<td id="name">Black Leather Sofa</td>
-	<td rowspan="4" id="picture"><img src="iphone.jpg"></td>
-	<td id="name">Silver iPhone 5</td>
-	
-</tr>
-<tr>
-	<td id="price">Current Price: £200</td>
-	<td id="price">Current Price: £160</td>
-</tr>
-<tr>
-	<td id="price">Reserve: £250</td>
-	<td id="price">Reserve: £150</td>
-</tr>
-<tr>
-	<td id="bid"><button onClick="location.href='ItemView.jsp'">Place Bid</button></td>
-	<td id="bid"><button onClick="location.href='#'">Place Bid</button></td>
-</tr>
-<tr>
-	<td colspan="2" id="description">Black Genuine Leather Sofa. 3 years old and in very good condition</td>
-	<td colspan="2" id="description">Used silver iphone 5, minor scratches on back</td>
-</tr>
+<%
 
-<tr>
-	<td rowspan="4" id="picture"><img src="sandals.jpg"></td>
-	<td id="name">Ugg Size 4 Gladiator Sandals</td>
-	<td rowspan="4" id="picture"><img src="skaterdress.jpg"></td>
-	<td id="name">Miss Selfridge Size 10 Black Skater Dress</td>
+List<ItemsBean> allItems = (List<ItemsBean>)request.getAttribute("Results");
+for (ItemsBean i : allItems) {
+	out.println("<tr>"
+	+ "<td id='picture'><img src='" + i.getPicture() + "'></td>"
+	+ "</tr>"
+	+ "<tr>"
+	+ "<td id='name'>"  + i.getTitle() + "</td>"
+	+ "</tr>"
+	+ "<tr>"
+	+ "<td id='price'> £"  + i.getPrice() + "</td>"
+	+ "</tr>"
+	+ "<tr>"
+	+ "<td><form action='ItemView' action='post'><input type='hidden' name='ItemID' value='" + i.getItemID() + "'><input type='submit' id='bid' value='View Item'></form></td>"
+	+ "</tr>");
 	
-</tr>
-<tr>
-	<td id="price">Current Price: £15</td>
-	<td id="price">Current Price: £12</td>
-</tr>
-<tr>
-	<td id="price">Reserve: £40</td>
-	<td id="price">Reserve: £15</td>
-<tr>
-	<td id="bid"><button onClick="location.href='#'">Place Bid</button></td>
-	<td id="bid"><button onClick="location.href='#'">Place Bid</button></td>
-</tr>
-<tr>
-	<td colspan="2" id="description">Brand new in box, size 4 tan gladiator sandals. Never worn as too small</td>
-	<td colspan="2" id="description">Worn once, more a size 12. Excellent condition</td>
-</tr>
+}
+	
+%>
 </table>
 </nav>
 </body>

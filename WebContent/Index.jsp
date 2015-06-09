@@ -17,7 +17,7 @@
 </a>
 </div>
 <div class="menu">
-<a href="Buyers.jsp">Buyer</a>
+<a href="Buyers">Buyer</a>
 <a href="SellerMenu.jsp">Seller</a>
 <a href="AccountsMenu.jsp">Account</a>
 </div>
@@ -35,15 +35,16 @@ for (ItemsBean i : allItems) {
 	+ "<td id='name'>"  + i.getTitle() + "</td>"
 	+ "</tr>"
 	+ "<tr>"
-	+ "<td id='price'>"  + i.getPrice() + "</td>"
+	+ "<td id='price'> £"  + i.getPrice() + "</td>"
 	+ "</tr>"
 	+ "<tr>"
-	+ "<td><button id='bid' onClick='location.href='#''>View Item</button></td>"
+	+ "<td><form action='ItemView' action='post'><input type='hidden' name='ItemID' value='" + i.getItemID() + "'><input type='submit' id='bid' value='View Item'></form></td>"
 	+ "</tr>");
 	
 }
 	
 %>
+
 </table>
 <br><br>
 </body>

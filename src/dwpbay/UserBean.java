@@ -1,6 +1,6 @@
 package dwpbay;
 
-public class User {
+public class UserBean {
 
 	private int userID ;
 	private String firstName ;
@@ -9,7 +9,7 @@ public class User {
 	private String address ;
 	private String postcode ;
 	
-	public User(int userID, String firstName, String lastName, String email, String address, String postcode) {
+	public UserBean(int userID, String firstName, String lastName, String email, String address, String postcode) {
 		this.userID = userID ;
 		this.firstName = firstName ;
 		this.lastName = lastName ;

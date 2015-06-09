@@ -51,8 +51,8 @@ td#picture {
 	padding-top: 5%;
 }
 td#picture img {
-	width: 130px;
-	hight: 150px;
+	width: 25%;
+	hight: 25%;
 }
 td#name {
 	color: #003366;
@@ -63,7 +63,12 @@ td#price {
 	font-size: 175%;
 	font-weight: bold;
 }
-
+td form#bid button {
+	vertical-align: middle;
+	color: #003366;
+	text-decoration: none;
+	font-size: 200%;
+}
 td button {
 	vertical-align: top;
 }
